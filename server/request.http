@@ -1,0 +1,52 @@
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+    "username": "helloo",
+    "password": "onetwo"
+}
+
+###
+
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+    "username": "helloo",
+    "password": "onetwo"
+}
+
+
+###
+
+
+POST http://localhost:5000/api/posts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MDczMDkwMWY1NzNkZTY0NmMwNzBlNjYiLCJpYXQiOjE2MTgxNTE3NTh9._LAMklGakCDi5uz0DCLDPBXt6vLY7pvxAUKPjLRB8WA
+    
+{   
+    "title": "React",
+    "description": "learn React",
+    "status": "To Learn"
+}
+
+
+###
+
+GET http://localhost:5000/api/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MDczMDkwMWY1NzNkZTY0NmMwNzBlNjYiLCJpYXQiOjE2MTgxNTE3NTh9._LAMklGakCDi5uz0DCLDPBXt6vLY7pvxAUKPjLRB8WA
+
+
+### 
+PUT http://localhost:5000/api/posts/60730c0dcbdc7a25517e11a3
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MDczMDkwMWY1NzNkZTY0NmMwNzBlNjYiLCJpYXQiOjE2MTgxNTE3NTh9._LAMklGakCDi5uz0DCLDPBXt6vLY7pvxAUKPjLRB8WA
+    
+{
+    "description": "Learning Machine Learning"
+}
+
+###
+DELETE http://localhost:5000/api/posts/60730c0dcbdc7a25517e11a3
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MDczMDkwMWY1NzNkZTY0NmMwNzBlNjYiLCJpYXQiOjE2MTgxNTE3NTh9._LAMklGakCDi5uz0DCLDPBXt6vLY7pvxAUKPjLRB8WA
+    
