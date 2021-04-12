@@ -25,7 +25,7 @@ Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MDczMDkwMWY1NzNkZTY0NmMwNzBlNjYiLCJpYXQiOjE2MTgxNTE3NTh9._LAMklGakCDi5uz0DCLDPBXt6vLY7pvxAUKPjLRB8WA
     
 {   
-    "title": "React",
+    "title": "ReactJs",
     "description": "learn React",
     "status": "To Learn"
 }

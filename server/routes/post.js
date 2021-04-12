@@ -34,7 +34,7 @@ router.post("/", verifyToken, async (req, res) => {
 		const newPost = new Post({
 			title: title,
 			description: description,
-			url: (url.startsWith("https://") ? url : "https://" + url) || "",
+			url: url != null ? (url.startsWith("https://") ? url : "https://" + url) : "",
 			status: status || "To Learn",
 			user: req.userId,
 		});
@@ -71,7 +71,7 @@ router.put("/:id", verifyToken, async (req, res) => {
 				.status(500)
 				.json({ success: false, message: "Post not found or user not authorized" });
 
-		res.json({ success:true, messsage:"Excellent Process!", post: updatedPost})
+		res.json({ success: true, messsage: "Excellent Process!", post: updatedPost });
 	} catch (error) {
 		console.log(error);
 		res.status(500).json({ success: false, message: "Server error!" });
@@ -81,10 +81,10 @@ router.put("/:id", verifyToken, async (req, res) => {
 // @route DELETE api/posts
 // @desc delete posts
 // @access Private
-router.delete('/:id', verifyToken, async (req,res) => {
+router.delete("/:id", verifyToken, async (req, res) => {
 	try {
-		const postDeleteCondition = {_id: req.params.id, user: req.userId }
-		const deletedPost = await Post.findOneAndDelete(postDeleteCondition)
+		const postDeleteCondition = { _id: req.params.id, user: req.userId };
+		const deletedPost = await Post.findOneAndDelete(postDeleteCondition);
 
 		// user not authorized or post not found
 		if (!deletedPost)
@@ -92,11 +92,11 @@ router.delete('/:id', verifyToken, async (req,res) => {
 				.status(500)
 				.json({ success: false, message: "Post not found or user not authorized" });
 
-		res.json({ success:true, messsage:"Deleted successfull!", post: deletedPost})
+		res.json({ success: true, messsage: "Deleted successfull!", post: deletedPost });
 	} catch (error) {
 		console.log(error);
 		res.status(500).json({ success: false, message: "Server error!" });
 	}
-})
+});
 
 module.exports = router;
