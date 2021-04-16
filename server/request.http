@@ -2,8 +2,8 @@ POST http://localhost:5000/api/auth/register
 Content-Type: application/json
 
 {
-    "username": "helloo",
-    "password": "onetwo"
+    "username": "dqa210c2@gmail.com",
+    "password": "ando123"
 }
 
 ###
@@ -12,41 +12,52 @@ POST http://localhost:5000/api/auth/login
 Content-Type: application/json
 
 {
-    "username": "helloo",
-    "password": "onetwo"
+    "username": "dqa10c2@gmail.com",
+    "password": "ando123"
 }
 
 
+###
+
+GET http://localhost:5000/api/auth/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MDc4OGYxNDdmMDU0YjdmMzE5MGJjNzgiLCJpYXQiOjE2MTg1NDQ2ODV9.KFNQtcKlWmnOTIInp722KfDSAc2hvg9TFISKOKoYQcs
+
+###
+POST http://localhost:5000/api/auth/me/logoutall
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MDc4OGYxNDdmMDU0YjdmMzE5MGJjNzgiLCJpYXQiOjE2MTg1MjE2NzJ9.XcYf_uAj6d-AixbQZXnZaYpFgCWOqzIsKFkKRbcneY8
 ###
 
 
 POST http://localhost:5000/api/posts
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MDczMDkwMWY1NzNkZTY0NmMwNzBlNjYiLCJpYXQiOjE2MTgxNTE3NTh9._LAMklGakCDi5uz0DCLDPBXt6vLY7pvxAUKPjLRB8WA
-    
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MDc4OGYxNDdmMDU0YjdmMzE5MGJjNzgiLCJpYXQiOjE2MTg1NDQ5NzR9.ikBQhza1DAjlzQGNjmddGLqcEtO41qlOPTJ94UuubK8
+
 {   
-    "title": "ReactJs",
-    "description": "learn React",
-    "status": "To Learn"
+    "title": "Deep Learning",
+    "description": "learnig Deep Learning Algorithms",
+    "status": "Learned"
 }
 
 
 ###
 
-GET http://localhost:5000/api/posts
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MDczMDkwMWY1NzNkZTY0NmMwNzBlNjYiLCJpYXQiOjE2MTgxNTE3NTh9._LAMklGakCDi5uz0DCLDPBXt6vLY7pvxAUKPjLRB8WA
+GET http://localhost:5000/api/posts/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MDc4OGYxNDdmMDU0YjdmMzE5MGJjNzgiLCJpYXQiOjE2MTg1NDQ5NzR9.ikBQhza1DAjlzQGNjmddGLqcEtO41qlOPTJ94UuubK8
 
 
 ### 
-PUT http://localhost:5000/api/posts/60730c0dcbdc7a25517e11a3
+PUT http://localhost:5000/api/posts/60790b90a7ef783d36ada8eb
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MDczMDkwMWY1NzNkZTY0NmMwNzBlNjYiLCJpYXQiOjE2MTgxNTE3NTh9._LAMklGakCDi5uz0DCLDPBXt6vLY7pvxAUKPjLRB8WA
-    
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MDc4OGYxNDdmMDU0YjdmMzE5MGJjNzgiLCJpYXQiOjE2MTg1NDQ2ODV9.KFNQtcKlWmnOTIInp722KfDSAc2hvg9TFISKOKoYQcs
+
 {
+    "title": "java",
     "description": "Learning Machine Learning"
 }
 
 ###
-DELETE http://localhost:5000/api/posts/60730c0dcbdc7a25517e11a3
+DELETE http://localhost:5000/api/607909bf21879257b2a6fd3e
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MDczMDkwMWY1NzNkZTY0NmMwNzBlNjYiLCJpYXQiOjE2MTgxNTE3NTh9._LAMklGakCDi5uz0DCLDPBXt6vLY7pvxAUKPjLRB8WA
     

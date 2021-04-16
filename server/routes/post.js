@@ -11,9 +11,9 @@ const Post = require("../models/Post");
 // @access Private
 router.get("/", verifyToken, async (req, res) => {
 	try {
-		// get all posts of user logined, get username of user
+		// get all posts of user logined, get email of user
 		const posts = await Post.find({ user: req.userId }).populate("user", ["username"]);
-		res.json({ success: true, posts });
+		res.json({ success: true, posts: posts });
 	} catch (error) {
 		console.log(error);
 		res.status(500).json({ success: false, message: "Server error!" });
@@ -59,7 +59,7 @@ router.put("/:id", verifyToken, async (req, res) => {
 		let updatedPost = {
 			title: title,
 			description: description || "",
-			url: (url.startsWith("https://") ? url : "https://" + url) || "",
+			url: url != null ? (url.startsWith("https://") ? url : "https://" + url) : "",
 			status: status || "To Learn",
 		};
 		const postUpdateCondition = { _id: req.params.id, user: req.userId };

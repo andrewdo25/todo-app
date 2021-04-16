@@ -1,5 +1,6 @@
 const express = require("express");
 const mongoose = require("mongoose");
+const cors = require('cors')
 // De dung duoc file env
 require("dotenv/config");
 
@@ -26,6 +27,7 @@ connectDB();
 const app = express();
 // de app co the doc dc json
 app.use(express.json());
+app.use(cors())
 
 app.get("/", (req, res) => {
 	res.send("Hello world");
@@ -37,5 +39,5 @@ app.use("/api/auth", authRouter);
 app.use("/api/posts", postRouter);
 
 // start server
-const PORT = process.env.PORT || 6000;
+const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log("Server started on port", PORT));
