@@ -9,7 +9,7 @@ const postRouter = require("./routes/post");
 
 const connectDB = async () => {
 	try {
-		await mongoose.connect(process.env.MONGO_URL, {
+		await mongoose.connect(`mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@mern-learnit.j0fcc.mongodb.net/mern-learnit?retryWrites=true&w=majority`, {
 			useCreateIndex: true,
 			useNewUrlParser: true,
 			useUnifiedTopology: true,
