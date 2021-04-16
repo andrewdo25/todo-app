@@ -1,5 +1,5 @@
 export const apiUrl =
-	process.env.NODE_ENV !== "production" ? "http://localhost:5000/api" : "somedeployedURL";
+	process.env.NODE_ENV !== "production" ? "https://post-mearn-app.herokuapp.com/api" : "somedeployedURL";
 
 export const LOCAL_STORAGE_TOKEN_NAME = "post-mern";
 export const POSTS_LOADED_SUCCESS = "POSTS_LOADED_SUCCESS";
